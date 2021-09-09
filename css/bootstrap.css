@@ -6196,6 +6196,9 @@ fieldset:disabled .btn {
 .h-50 {
   height: 50% !important;
 }
+.h-60 {
+  height: 60% !important;
+}
 
 .h-75 {
   height: 75% !important;
@@ -15779,12 +15782,20 @@ fieldset:disabled .btn {
   border-width: 5px !important;
 }
 
+.w-12 {
+  width: 12% !important;
+}
+
 .w-25 {
   width: 25% !important;
 }
 
 .w-50 {
   width: 50% !important;
+}
+
+.w-60 {
+  width: 60% !important;
 }
 
 .w-75 {
