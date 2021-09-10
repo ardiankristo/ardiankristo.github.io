@@ -2178,8 +2178,8 @@ li.sub-menu--item.nav-item-has-children i {
 
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .brand-area-l-14 {
-  padding-top: 60px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2191,8 +2191,8 @@ li.sub-menu--item.nav-item-has-children i {
 
 @media (min-width: 992px) {
   .brand-area-l-14 {
-    padding-top: 100px;
-    padding-bottom: 130px;
+    padding-top: 50px;
+    padding-bottom: 80px;
   }
 }
 
