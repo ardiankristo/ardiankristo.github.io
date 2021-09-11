@@ -30,10 +30,10 @@ $(document).ready(function() {
         } else {
             $(".site-header--sticky").removeClass("scrolling");
         }
-        const pageIsIndex = (window.location.pathname.split("/")[window.location.pathname.split("/").length - 1].includes("index.html"));
+        const pageIsShowcaseMobile = window.location.pathname.includes("showcase-mobile.html");
         if (
-            document.body.scrollTop > (pageIsIndex ? 700 : 200) ||
-            document.documentElement.scrollTop > (pageIsIndex ? 700 : 200)
+            document.body.scrollTop > (pageIsShowcaseMobile ? 200 : 700) ||
+            document.documentElement.scrollTop > (pageIsShowcaseMobile ? 200 : 700)
         ) {
             $(".site-header--sticky.scrolling").addClass("reveal-header");
         } else {
