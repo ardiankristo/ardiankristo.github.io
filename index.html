@@ -46,7 +46,7 @@
               <!-- Dark version logo (logo must be White)-->
               <!-- <img src="image/logo/logo-white.png" alt="" class="dark-version-logo"> -->
               <!-- My GIF -->
-              <img src="image/logo/kristo-black.gif" alt="" class="w-12 my-3 rounded-3" id="logo" onclick="onClickLogo()">
+              <img src="image/logo/kristo-black.gif" alt="" class="w-12 my-3 rounded-3" id="logo" onclick="onClickHeaderLogo()">
             </a>
           </div>
           <div class="menu-block-wrapper">
@@ -520,6 +520,35 @@
         </div>
       </div>
     </div> -->
+    <!-- <div class="row my-3">
+      <div class="col-lg-12">
+        <div class="brand-aarea-border-l14"></div>
+      </div>
+    </div> -->
+    <!-- <div class="brand-area-l-14">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h4>Logo</h4>
+          </div>
+        </div>
+        <div class="row img-grayscale">
+          <div class="col-lg-12">
+            <div class="brand-area-l-14-items d-flex justify-content-center justify-content-xl-around align-items-center flex-wrap ">
+              <div class="single-brand " data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+                <a href="javascript:void(0);" onclick="onClickLogoDisplay()">
+                  <img src="image/logo/kristo-black.gif" alt="" class="rounded-3 border border-1 w-50" style="margin: 10px auto 20px; display: block;" id="logo-1">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0);" onclick="onClickLogoDisplay()">
+          <h4 class="mt-4" id="switch-text" style="color: #1787FC;">Press Me!</h4>
+        </a>
+        <p class="mt-4 text-primary text-center" id="my-quote-text">"Yes, I do main support" - Kristo, 2021</p>
+      </div>
+    </div> -->
     <div class="row my-3">
       <div class="col-lg-12">
         <div class="brand-aarea-border-l14"></div>
@@ -595,44 +624,86 @@
         </div>
       </div>
     </footer>
+    <div id="myModal" class="modal w-auto p-5">
+      <div class="modal-content" style="padding: 11px;">
+        <a href="javascript:void(0);" onclick="onClickCloseModal()">
+          <span style="font-size: x-large;">&times;</span>
+        </a>
+        <div class="brand-area-l-14">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <h4>Logo</h4>
+              </div>
+            </div>
+            <div class="row img-grayscale">
+              <div class="col-lg-12">
+                <div class="brand-area-l-14-items d-flex justify-content-center justify-content-xl-around align-items-center flex-wrap ">
+                  <div class="single-brand " data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+                    <a href="javascript:void(0);" onclick="onClickDisplayLogo()">
+                      <img src="image/logo/kristo-black.gif" alt="" class="rounded-3 border border-1 w-50" style="margin: 10px auto 20px; display: block;" id="logo-1">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0);" onclick="onClickDisplayLogo()">
+              <h4 class="mt-4" id="switch-text" style="color: #1787FC;">Press Me!</h4>
+            </a>
+            <p class="mt-4 text-primary text-center" id="my-quote-text">"Yes, I do main support" - Kristo, 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="./plugins/aos/aos.min.js"></script>
   <script src="./plugins/menu/menu.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    function onClickLogo() {
-      if(document.getElementById("logo").src.split("/")[document.getElementById("logo").src.split("/").length - 1] === "kristo-black.gif") {
+    function onClickHeaderLogo() {
+      // if(document.getElementById("logo").src.split("/")[document.getElementById("logo").src.split("/").length - 1] === "kristo-black.gif") {
+      //   document.getElementById("logo").src = "image/logo/kristo-white.gif";
+      // } else {
+      //   document.getElementById("logo").src = "image/logo/kristo-black.gif";
+      // }
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    }
+    function onClickCloseModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+    function onClickDisplayLogo() {
+      if(document.getElementById("logo-1").src.split("/")[document.getElementById("logo-1").src.split("/").length - 1] === "kristo-black.gif") {
         document.getElementById("logo").src = "image/logo/kristo-white.gif";
+        document.getElementById("logo-1").src = "image/logo/kristo-white.gif";
+        document.getElementById("switch-text").style.color = "#FF7139";
+        document.getElementById("my-quote-text").style.color = "#FF7139";
       } else {
+        document.getElementById("logo-1").src = "image/logo/kristo-black.gif";
         document.getElementById("logo").src = "image/logo/kristo-black.gif";
+        document.getElementById("switch-text").style.color = "#1787FC";
+        document.getElementById("my-quote-text").style.color = "#1787FC";
       }
     }
   </script>
   <script>
-    // Set the date we're counting down to
-    
-    // Update the count down every 1 second
     var myBirthDate = new Date("Jun 22, 1999 00:00:00").getTime();
     var myBirthDateThisYear = new Date("Jun 22, " + new Date().getFullYear() + " 00:00:00").getTime();
     
     var x = setInterval(function() {
-    
-      // Get today's date and time
       var now = new Date().getTime();
     
-      // Find the distance between now and the count down date
       var distance = now - myBirthDate;
       var distanceToNearestLastBirthday = now - myBirthDateThisYear;
     
-      // Time calculations for days, hours, minutes and seconds
       var years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
       var days = Math.floor(distanceToNearestLastBirthday / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-      // Display the result in the element with id="demo"
       document.getElementById("myAge").innerHTML = 
       years + (years === 0 || years === 1 ? " year " : " years ") + 
       days + (days === 0 || days === 1 ? " day " : " days ") + 
@@ -640,13 +711,13 @@
       minutes + (minutes === 0 || minutes === 1 ? " minute" : " minutes") + " and " + 
       seconds + (seconds === 0 || seconds === 1 ? " second" : " seconds") + " years old";
     
-      // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("myAge").innerHTML = "EXPIRED";
       }
     }, 1000);
   </script>
+  <script></script>
 </body>
 
 </html>
