@@ -1159,7 +1159,8 @@ li.sub-menu--item.nav-item-has-children i {
 }
 
 .btn:hover {
-  color: #fff !important;
+  color: #1787FC !important;
+  background-color: #FFC947 !important;
 }
 
 .btn:focus {
@@ -2097,7 +2098,7 @@ li.sub-menu--item.nav-item-has-children i {
 }
 
 .hero-area-l-14 .bg-shape-14 {
-  background: url(../image/l4/bg-gradient-blue.svg);
+  background: url(../image/l4/bg-gradient-blue-4.svg);
   background-repeat: no-repeat;
   position: absolute;
   top: 0px;

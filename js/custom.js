@@ -36,8 +36,16 @@ $(document).ready(function() {
             document.documentElement.scrollTop > (pageIsShowcaseMobile ? 200 : 700)
         ) {
             $(".site-header--sticky.scrolling").addClass("reveal-header");
+            if ($("#logo")[0].src.split("/")[document.getElementById("logo-1").src.split("/").length - 1] === "kristo-white.gif") {
+                $("#logo")[0].src = "image/logo/kristo-black.gif";
+                $("#logo-1")[0].src = "image/logo/kristo-black.gif";
+            }
         } else {
             $(".site-header--sticky.scrolling").removeClass("reveal-header");
+            if ($("#logo")[0].src.split("/")[document.getElementById("logo-1").src.split("/").length - 1] === "kristo-black.gif") {
+                $("#logo")[0].src = "image/logo/kristo-white.gif";
+                $("#logo-1")[0].src = "image/logo/kristo-white.gif";
+            }
         }
     }
 
@@ -46,7 +54,6 @@ $(document).ready(function() {
            Prcing Dynamic Script
     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
     $('#table-price-value .toggle-btn').on("click", function(e) {
-        console.log($(e.target).parent().parent().hasClass("monthly-active"));
         $(e.target).toggleClass("clicked");
         if ($(e.target).parent().parent().hasClass("monthly-active")) {
             $(e.target).parent().parent().removeClass("monthly-active").addClass("yearly-active");
@@ -58,7 +65,6 @@ $(document).ready(function() {
     $("[data-pricing-trigger]").on("click", function(e) {
         $(e.target).addClass("active").siblings().removeClass("active");
         var target = $(e.target).attr("data-target");
-        console.log($(target).attr("data-value-active") == "monthly");
         if ($(target).attr("data-value-active") == "monthly") {
             $(target).attr("data-value-active", "yearly");
         } else {
