@@ -30,10 +30,10 @@ $(document).ready(function() {
         } else {
             $(".site-header--sticky").removeClass("scrolling");
         }
-        const pageIsShowcaseMobile = window.location.pathname.includes("showcase-mobile.html");
+        const pageIsShowcaseMobileOrWeb = window.location.pathname.includes("showcase-mobile.html") || window.location.pathname.includes("showcase-website.html");
         if (
-            document.body.scrollTop > (pageIsShowcaseMobile ? 200 : 700) ||
-            document.documentElement.scrollTop > (pageIsShowcaseMobile ? 200 : 700)
+            document.body.scrollTop > (pageIsShowcaseMobileOrWeb ? 280 : 700) ||
+            document.documentElement.scrollTop > (pageIsShowcaseMobileOrWeb ? 280 : 700)
         ) {
             $(".site-header--sticky.scrolling").addClass("reveal-header");
             if ($("#logo")[0].src.split("/")[document.getElementById("logo-1").src.split("/").length - 1] === "kristo-white.gif") {
