@@ -3382,3 +3382,16 @@ img.spin {
 }
 
 /*# sourceMappingURL=maps/main.css.map */
+
+/* CUSTOM CSS */
+
+.achievement-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 992px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
