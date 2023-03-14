@@ -3395,3 +3395,19 @@ img.spin {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 576px) {
+  .mobile-margin-left {
+    margin-left: 0.5rem;
+  }
+}
+
+.btn-dark {
+  background-color: black !important;
+  color: white !important;
+}
+
+.btn-dark:hover {
+  color: #FFC947 !important;
+  background-color: #1787FC !important;
+}
