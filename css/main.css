@@ -3482,7 +3482,9 @@ img.spin {
 }
 
 .my-age-timer {
-  width: 118px;
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
 
   font-family: monospace !important;
   font-size: 12px !important;
