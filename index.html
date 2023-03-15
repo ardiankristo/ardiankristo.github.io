@@ -194,10 +194,9 @@
                   <p id="my-age" class="my-age" class="col-12 fw-bold"></p>
                 </div>
                 <p class="mt-3">
-                  and an Informatics Engineering graduate from PENS, Indonesia
-                  on 2021. Active on developing front end website and mobile
-                  applications for work, freelance projects, and passion
-                  projects (such as this site).
+                  and a code enthusiasts that is currently active on developing
+                  front end website and mobile applications for work, freelance
+                  projects, and passion projects (such as this site).
                 </p>
               </div>
             </div>
@@ -804,7 +803,6 @@
         "Nov",
         "Dec",
       ];
-
       const myBirthDate = new Date("Jun 22, 1999 00:00:00");
 
       let myBirthDateThisYear = new Date(
@@ -822,10 +820,11 @@
       }
 
       const getCurrentAge = setInterval(() => {
-        const now = new Date().getTime();
+        const now = new Date();
 
-        const distance = now - myBirthDate.getTime();
-        const distanceToNearestLastBirthday = now - myBirthDateThisYear;
+        const distance = now.getTime() - myBirthDate.getTime();
+        const distanceToNearestLastBirthday =
+          now.getTime() - myBirthDateThisYear;
 
         const years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
         const days = Math.floor(
@@ -856,6 +855,14 @@
         document.getElementById("my-age").innerHTML = `<p>${years} ${
           years === 0 || years === 1 ? " year " : " years "
         } and</p><p class="my-age-timer">${days}d:${hours}h:${minutes}m:${seconds}s</p><p>years old.</p>`;
+
+        if (
+          now.getDate() === myBirthDate.getDate() &&
+          !sessionStorage.getItem("is_alerted_happy_birthday")
+        ) {
+          alert("Happy Birthday!");
+          sessionStorage.setItem("is_alerted_happy_birthday", "true");
+        }
 
         if (distance < 0) {
           clearInterval(getCurrentAge);
