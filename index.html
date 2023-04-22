@@ -866,6 +866,7 @@
 
         if (
           now.getDate() === myBirthDate.getDate() &&
+          now.getMonth() === myBirthDate.getMonth() &&
           !sessionStorage.getItem("is_alerted_happy_birthday")
         ) {
           alert("Happy Birthday!");
